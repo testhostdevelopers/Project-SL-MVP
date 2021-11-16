@@ -29,11 +29,7 @@ const SignIn = () => {
                 animate="visible"
                 variants={variants} className="container-fluid sign-in-container-section">
                 <div className="row">
-                    <div className="col-lg-4 d-sm-none d-lg-block p-0 m-0">
-                        <img src={signInBanner} width="100%" />
-                    </div>
-
-                    <div className="col-sm-12 col-lg-8 d-flex justify-content-center sig-in-mobile">
+                    <div className="col-sm-12 col-lg-8 mx-auto d-flex justify-content-center sig-in-mobile">
                         <div>
                             <div className="mt-5">
                                 <Link className="d-flex align-items-center" to="/CreateCollectible">
@@ -49,42 +45,22 @@ const SignIn = () => {
                                 <p className="mb-4 mt-3">Sign in with one of available wallet providers or create a new wallet <br />
                                     <span className="color-ping"> <b>What is a wallet?</b></span></p>
 
-                                <button className="btn btn-ping signInActiveBtn w-100 d-flex align-items-center justify-content-center mb-4">
+                                <button className="btn ml-0 btn-ping signInActiveBtn w-100 d-flex align-items-center justify-content-center mb-4">
                                     <img src={metamask} width="20px" />
                                     <div style={{ margin: "auto auto" }}>Sign in with Metamask</div>
                                 </button>
 
-                                <button className="btn btn-primary-outline w-100 d-flex align-items-center justify-content-center mb-4">
+                                <button className="btn ml-0 btn-primary-outline w-100 d-flex align-items-center justify-content-center mb-4">
                                     <img src={Torus} width="20px" />
                                     <div style={{ margin: "auto auto" }}><b>Torus</b></div>
                                 </button>
 
-                                <button className="btn btn-primary-outline w-100 d-flex align-items-center justify-content-center mb-4">
+                                <button className="btn ml-0 btn-primary-outline w-100 d-flex align-items-center justify-content-center mb-4">
                                     <img src={MobileWallet} width="20px" />
                                     <div style={{ margin: "auto auto" }}><b>Mobile Wallet</b></div>
                                 </button>
 
-                                <button className="btn btn-primary-outline w-100 d-flex align-items-center justify-content-center mb-4">
-                                    <img src={Porttis} width="20px" />
-                                    <div style={{ margin: "auto auto" }}><b>Porttis</b></div>
-                                </button>
-
-                                <button className="btn btn-primary-outline w-100 d-flex align-items-center justify-content-center mb-4">
-                                    <img src={Coinbase} width="20px" />
-                                    <div style={{ margin: "auto auto" }}><b>Coinbase</b></div>
-                                </button>
-
-                                <button className="btn btn-primary-outline w-100 d-flex align-items-center justify-content-center mb-4">
-                                    <img src={MyEtherWallet} width="20px" />
-                                    <div style={{ margin: "auto auto" }}><b>MyEtherWallet</b></div>
-                                </button>
-
-                                <button className="btn btn-primary-outline w-100 d-flex align-items-center justify-content-center mb-4">
-                                    <img src={Fortmatic} width="20px" />
-                                    <div style={{ margin: "auto auto" }}><b>Fortmatic</b></div>
-                                </button>
-
-                                <button className="btn btn-primary-outline w-100 d-flex align-items-center justify-content-center mb-4">
+                                <button className="btn ml-0 btn-primary-outline w-100 d-flex align-items-center justify-content-center mb-4">
                                     <div style={{ margin: "auto auto" }}><b>Show less options</b></div>
                                 </button>
 

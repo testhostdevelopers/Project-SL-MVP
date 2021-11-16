@@ -12,6 +12,7 @@ import SignIn from './Pages/SignIn';
 import Token from './Pages/Token';
 import Cryptoloria from './Pages/Cryptoloria';
 import Explore from './Pages/Explore';
+import Collection from './Pages/Collection';
 
 import FullScreenImage from './Components/Popup/FullScreenImage';
 import CreateCollectibleMultiplePopup from './Components/Popup/CreateCollectibleMultiplePopup';
@@ -39,6 +40,7 @@ const App = () => {
                     <Route path="/Token" component={Token} exact />
                     <Route path="/Buy" component={Buy} exact />
                     <Route path="/Explore" component={Explore} exact />
+                    <Route path="/Collection" component={Collection} exact />
                 </Switch>
                 <Footer />
             </Router>

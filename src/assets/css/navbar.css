@@ -318,21 +318,24 @@ header {
     transition: ease .6s all;
 }
 
-.openProfileDropMenu{
+.openProfileDropMenu {
     padding: 20px;
     background-color: var(--bg-white);
     border-radius: 15px;
     position: absolute;
     top: 40px;
-    right: 15px;
+    right: -5px;
     box-shadow: 0px 25px 60px rgba(0, 0, 0, 0.08);
     z-index: 999;
+    left: -360px;
 }
 
 
 .openProfileDropMenu .border-section{
     border-top: solid 1px var(--gray-bg);
     border-bottom: solid 1px var(--gray-bg);
+    margin-bottom: 20px;
+    padding-bottom: 20px;
 }
 
 .openProfileDropMenu .btn-dark-outline{
@@ -356,9 +359,22 @@ header {
     width: 380px;
 }
 
-.notificationPopup .border-section{
+.notipopup-display{
+    display: flex;
+    justify-content: space-between;
+}
+
+.notificationPopup > h4{
+    font-size: 24px;
+    color: #000000;
+    font-weight: bold;
+    margin-bottom: 8px !important;
+}
+
+.notificationPopup .border-section {
     border-top: solid 1px var(--gray-bg);
     border-bottom: solid 1px var(--gray-bg);
+    padding-bottom: 28px;
 }
 
 .notificationPopup .btn-dark-outline{
@@ -437,3 +453,20 @@ header {
 .landing-header.navbar .dropdown-toggle::after {
     border-color: #fff transparent transparent transparent;
 }
+
+.add-funds-with-btn{
+    background: #FBFBFB;
+    border: 0.5px solid #C7C7C7;
+    box-sizing: border-box;
+    border-radius: 47px;
+    font-weight: bold;
+    padding: 10px 10px;
+    text-align: center;
+}
+
+.add-funds-with-btn > span{
+    margin-left: 13px;
+    display: inline-block;
+    vertical-align: top;
+}
+ 

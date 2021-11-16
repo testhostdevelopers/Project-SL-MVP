@@ -6,9 +6,17 @@ import userProfilePictures from "../../assets/img/icons/custom/userNav.svg";
 import fabaLogo from "../../assets/img/custom/x.svg";
 import { useLocation, Link } from "react-router-dom";
 import userTick from "../../assets/img/icons/custom/logo.svg";
+import TransferArrow from "../../assets/img/icons/custom/transfer-arrow.png";
 import grayPp from "../../assets/img/custom/grayPp.png";
+import StarlightbalanceIcon from "../../assets/img/custom/StarlightbalanceIcon.png";
+import BalanceIcon from "../../assets/img/custom/BalanceIcon.png";
+import BidingbalanceIcon from "../../assets/img/custom/BidingbalanceIcon.png";
+import VisaIcon from "../../assets/img/custom/visaicon.png";
+import McdoIcon from "../../assets/img/custom/mcdoicon.png";
 
 const Navbar = () => {
+    const [singleCollectionPopup, setSingleCollectionPopup] = useState(false);
+    const [singlePopup, setSinglePopup] = useState(false);
 
     const [theme, setTheme] = useState(localStorage.getItem('theme'))
     const [openProfileDropMenu, setOpenProfileDropMenu] = useState(false);
@@ -34,8 +42,6 @@ const Navbar = () => {
             document.documentElement.style.setProperty('--notification-ping-bg', "#402F5B");
             document.documentElement.style.setProperty('--footer-input-bg', "#C7C7C7");
             document.documentElement.style.setProperty('--bg-main-white', "#121212");
-
-
         } else {
             document.documentElement.style.setProperty('--bg-main', '#FCFCFC');
             document.documentElement.style.setProperty('--bg-card', '#fff');
@@ -148,86 +154,79 @@ const Navbar = () => {
                                     </svg>
                                     {
                                         openProfileDropMenu === false ? "" : <div className="openProfileDropMenu">
-                                            <h4>0×hubwc8fh2f....hb8fhr</h4>
-                                            <div className="color-ping text-left">Set display name</div>
+                                             <h4 className="text-left">0×hubwc8fh2f....hb8fhr</h4>
+                                            <div className="notipopup-display">
+                                                <a href="#0" className="color-ping"><b>Set display name</b></a>
+                                                <a href="#0" className="color-ping"><b>Upload profile picture</b></a>
+                                            </div>
 
                                             <div className="border-section pt-3 mt-3">
 
-                                                <div className="d-flex justify-content-between mb-3">
-                                                    <div className="d-flex">
+                                                    <div className="d-flex justify-content-between mb-3">
+                                                        <div className="d-flex align-items-center">
+                                                            <div>
+                                                                <img src={StarlightbalanceIcon} width="36" />
+                                                            </div>
+
+                                                            <div className="ml-3">
+                                                                <div><span className="color-gray">Starlight balance</span></div>
+                                                                <div className="text-left"><b>0 Starlight</b></div>
+                                                            </div>
+                                                        </div>
+
                                                         <div>
-                                                            <img src={userTick} width="36" />
-                                                        </div>
-
-                                                        <div className="ml-3">
-                                                            <div><span className="color-gray">Starlight balance</span></div>
-                                                            <div className="text-left">0 Starlight</div>
+                                                            <button className="btn-dark-outline">Claim</button>
                                                         </div>
                                                     </div>
 
-                                                    <div>
-                                                        <button className="btn-dark-outline">Claim</button>
-                                                    </div>
-                                                </div>
+                                                    <div className="d-flex justify-content-between mb-3">
+                                                        <div className="d-flex align-items-center">
+                                                            <div>
+                                                                <img src={BalanceIcon} width="36" />
+                                                            </div>
 
-                                                <div className="d-flex justify-content-between mb-3">
-                                                    <div className="d-flex">
+                                                            <div className="ml-3">
+                                                                <div><span className="color-gray">Balance</span></div>
+                                                                <div className="text-left"><b>0 ETH</b></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div className="d-flex justify-content-between mb-3">
+                                                        <div className="d-flex align-items-center">
+                                                            <div>
+                                                                <img src={BidingbalanceIcon} width="36" />
+                                                            </div>
+
+                                                            <div className="ml-3">
+                                                                <div><span className="color-gray">Biding balance</span></div>
+                                                                <div className="text-left"><b>0 wETH</b></div>
+                                                            </div>
+                                                        </div>
+
                                                         <div>
-                                                            <img src={grayPp} width="36" />
-                                                        </div>
-
-                                                        <div className="ml-3">
-                                                            <div className="text-left"><span className="color-gray">Balance</span></div>
-                                                            <div className="text-left">0 Starlight</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div className="d-flex justify-content-between mb-3">
-                                                    <div className="d-flex">
-                                                        <div>
-                                                            <img src={grayPp} width="36" />
-                                                        </div>
-
-                                                        <div className="ml-3">
-                                                            <div><span className="color-gray">Biding balance</span></div>
-                                                            <div className="text-left">0 weTH</div>
+                                                            <a href="#0" className="d-block"><img src={TransferArrow}/></a>
                                                         </div>
                                                     </div>
 
-                                                    <a className="nav-link nav-dark-button">
-                                                        <svg width="20" height="20" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path fillRule="evenodd" clipRule="evenodd" d="M6.02452 4.24267L6.96719 3.3L3.66719 0L0.367188 3.3L1.31052 4.24267L3.00052 2.552V11.3333H4.33385V2.552L6.02452 4.24267ZM10.3352 12.0001L13.6352 8.70008L12.6925 7.75741L11.0018 9.44808V0.666748H9.66849L9.66916 9.44808L7.97782 7.75741L7.03516 8.70008L10.3352 12.0001Z" fill="black" />
-                                                        </svg>
-                                                    </a>
-                                                </div>
+                                                <div className="add-funds-with-btn">Add funds with <span><img src={McdoIcon}/><img src={VisaIcon}/></span></div>
 
                                             </div>
 
-
-                                            <div className="d-flex justify-content-between mb-3 mt-3">
-                                                <Link to="/Profile"> <h6>My Profile</h6></Link>
+                                            <div className="d-flex justify-content-between align-items-center mb-2">
+                                                <h6 className="m-0"><b>Manage funds</b></h6>
                                             </div>
 
-                                            <div className="d-flex justify-content-between mb-3">
-                                                <Link to="/CreateCollectibleEdit"><h6>Edit Profile</h6></Link>
-                                            </div>
-
-                                            <div className="d-flex justify-content-between align-items-center mb-3">
-                                                <h6 className="m-0">Manage funds</h6>
-
+                                            <div className="d-flex justify-content-between mb-2">
+                                                <h6><b>Autoplay</b></h6>
                                                 <div className="custom-control custom-switch">
                                                     <input type="checkbox" defaultChecked className="custom-control-input" id="profileSwitch3" />
                                                     <label className="custom-control-label" htmlFor="profileSwitch3"></label>
                                                 </div>
                                             </div>
 
-                                            <div className="d-flex justify-content-between mb-3">
-                                                <h6>Autoplay</h6>
-                                            </div>
-
                                             <div className="d-flex justify-content-between">
-                                                <h6>Sign out</h6>
+                                                <h6><b>Sign out</b></h6>
                                             </div>
 
 
@@ -363,19 +362,22 @@ const Navbar = () => {
                                             {
                                                 openProfileDropMenu === false ? "" : <div className="notificationPopup">
                                                     <h4 className="text-left">0×hubwc8fh2f....hb8fhr</h4>
-                                                    <div className="color-ping text-left mt-2">Set display name</div>
+                                                    <div className="notipopup-display">
+                                                        <a href="#0" className="color-ping"><b>Set display name</b></a>
+                                                        <a href="#0" className="color-ping"><b>Upload profile picture</b></a>
+                                                    </div>
 
                                                     <div className="border-section pt-3 mt-3">
 
                                                         <div className="d-flex justify-content-between mb-3">
-                                                            <div className="d-flex">
+                                                            <div className="d-flex align-items-center">
                                                                 <div>
-                                                                    <img src={userTick} width="36" />
+                                                                    <img src={StarlightbalanceIcon} width="36" />
                                                                 </div>
 
                                                                 <div className="ml-3">
                                                                     <div><span className="color-gray">Starlight balance</span></div>
-                                                                    <div className="text-left">0 Starlight</div>
+                                                                    <div className="text-left"><b>0 Starlight</b></div>
                                                                 </div>
                                                             </div>
 
@@ -385,51 +387,45 @@ const Navbar = () => {
                                                         </div>
 
                                                         <div className="d-flex justify-content-between mb-3">
-                                                            <div className="d-flex">
+                                                            <div className="d-flex align-items-center">
                                                                 <div>
-                                                                    <img src={grayPp} width="36" />
+                                                                    <img src={BalanceIcon} width="36" />
                                                                 </div>
 
                                                                 <div className="ml-3">
-                                                                    <div className="text-left"><span className="color-gray">Balance</span></div>
-                                                                    <div className="text-left">0 Starlight</div>
+                                                                    <div><span className="color-gray">Balance</span></div>
+                                                                    <div className="text-left"><b>0 ETH</b></div>
                                                                 </div>
                                                             </div>
                                                         </div>
 
                                                         <div className="d-flex justify-content-between mb-3">
-                                                            <div className="d-flex">
+                                                            <div className="d-flex align-items-center">
                                                                 <div>
-                                                                    <img src={grayPp} width="36" />
+                                                                    <img src={BidingbalanceIcon} width="36" />
                                                                 </div>
 
                                                                 <div className="ml-3">
                                                                     <div><span className="color-gray">Biding balance</span></div>
-                                                                    <div className="text-left">0 weTH</div>
+                                                                    <div className="text-left"><b>0 wETH</b></div>
                                                                 </div>
                                                             </div>
 
-                                                            <a className="nav-link nav-dark-button">
-                                                                <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path fillRule="evenodd" clipRule="evenodd" d="M6.02452 4.24267L6.96719 3.3L3.66719 0L0.367188 3.3L1.31052 4.24267L3.00052 2.552V11.3333H4.33385V2.552L6.02452 4.24267ZM10.3352 12.0001L13.6352 8.70008L12.6925 7.75741L11.0018 9.44808V0.666748H9.66849L9.66916 9.44808L7.97782 7.75741L7.03516 8.70008L10.3352 12.0001Z" fill="black" />
-                                                                </svg>
-
-                                                            </a>
+                                                            <div>
+                                                                <a href="#0" className="d-block"><img src={TransferArrow}/></a>
+                                                            </div>
                                                         </div>
 
+                                                        <div className="add-funds-with-btn">Add funds with <span><img src={McdoIcon}/><img src={VisaIcon}/></span></div>
+
                                                     </div>
 
-
-                                                    <div className="d-flex justify-content-between mb-3 mt-3">
-                                                        <Link to="/Profile"> <h6>My Profile</h6></Link>
+                                                    <div className="d-flex justify-content-between mb-2">
+                                                        <h6 className="m-0"><b>Manage funds</b></h6>
                                                     </div>
 
-                                                    <div className="d-flex justify-content-between mb-3">
-                                                        <Link to="/CreateCollectibleEdit"><h6>Edit Profile</h6></Link>
-                                                    </div>
-
-                                                    <div className="d-flex justify-content-between align-items-center mb-3">
-                                                        <h6 className="m-0">Manage funds</h6>
+                                                    <div className="d-flex justify-content-between align-items-center mb-2">
+                                                        <h6><b>Autoplay</b></h6>
 
                                                         <div className="custom-control custom-switch">
                                                             <input type="checkbox" className="custom-control-input" id="profileSwitch1" />
@@ -437,12 +433,8 @@ const Navbar = () => {
                                                         </div>
                                                     </div>
 
-                                                    <div className="d-flex justify-content-between mb-3">
-                                                        <h6>Autoplay</h6>
-                                                    </div>
-
                                                     <div className="d-flex justify-content-between">
-                                                        <h6>Sign out</h6>
+                                                        <h6><b>Sign out</b></h6>
                                                     </div>
 
 
