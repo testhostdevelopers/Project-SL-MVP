@@ -40,6 +40,12 @@ img{
     background-image: none;
     background-color: #6300FF;
 }
+
+.btn-fill:hover{
+    color: #fff;
+    opacity: 0.9;
+}
+
 .nav-item .btn-primary-outline,
 .nav-item .btn-primary {
     margin-left: 10px;

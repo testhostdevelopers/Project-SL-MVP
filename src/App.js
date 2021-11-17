@@ -20,6 +20,8 @@ import FinishedCollectiblePopup from './Components/Popup/FinishedCollectiblePopu
 import PlaceABidPopup from './Components/Popup/PlaceABidPopup';
 import PlaceABidFollowPopup from './Components/Popup/PlaceABidFollowPopup';
 import CoinConverPopup from './Components/Popup/CoinConverPopup';
+import UpcomingCollections from './Pages/UpcomingCollections';
+import TokenPage from './Pages/TokenPage';
 
 import 'swiper/swiper-bundle.css';
 import {
@@ -41,6 +43,8 @@ const App = () => {
                     <Route path="/Buy" component={Buy} exact />
                     <Route path="/Explore" component={Explore} exact />
                     <Route path="/Collection" component={Collection} exact />
+                    <Route path="/TokenPage" component={TokenPage} exact />
+                    <Route path="/UpcomingCollections" component={UpcomingCollections} exact />
                 </Switch>
                 <Footer />
             </Router>
