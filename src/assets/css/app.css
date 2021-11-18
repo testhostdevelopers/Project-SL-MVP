@@ -1927,3 +1927,58 @@ button.Test {
     top: 0;
     z-index: 99999;
 }
+
+
+/* Custom Tab Design */
+
+ul.react-tabs__tab-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+ul.react-tabs__tab-list > li{
+    flex: 1;
+}
+
+.pay-with-img {
+    margin-left: 13px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.pay-with-img img{
+    transition: all 0.5s ease 0s;    
+}
+
+.checkout-tab .react-tabs__tab-list{
+    background: #FBFBFB;
+    border: 1px solid #C7C7C7;
+    box-sizing: border-box;
+    border-radius: 47px;
+    padding: 5px;
+}
+
+.checkout-tab .react-tabs__tab-list li {
+    font-size: 14px;
+    text-align: center;
+    color: #000000;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 20px;
+    transition: all 0.5s ease 0s;
+    cursor: pointer;
+}
+
+.checkout-tab .react-tabs__tab-list li.react-tabs__tab--selected{
+    background-color: #6300FF;
+    color: #fff;
+}
+
+.checkout-tab .react-tabs__tab-list li.react-tabs__tab--selected img.change-img-mode{
+    filter: brightness(0) invert(1);
+}

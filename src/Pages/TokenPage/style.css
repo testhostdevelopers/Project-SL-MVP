@@ -446,8 +446,18 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    border-left: 1px solid #979797;
     padding-left: 60px;
+    position: relative;
+}
+
+.how-to-works-list:before{
+    content: "";
+    width: 2px;
+    background-color: #979797;
+    top: 20px;
+    bottom: 20px;
+    left: 0;
+    position: absolute;
 }
 
 .how-to-works-list li {
@@ -493,11 +503,16 @@
     list-style: none;
     margin: 0 -6px;
     padding: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    overflow-y: auto;
 }
 
 .tier-full-list li{
     width: 33.33%;
     padding: 0 6px;
+    min-width: 278px;
 }
 
 .tier-full-list li .tier-box{
@@ -515,11 +530,6 @@
     font-weight: bold !important;
     padding: 30px;
     border-bottom: 1px solid #979797;
-}
-
-.tier-full-list{
-    display: flex;
-    flex-wrap: wrap;
 }
 
 .tier-bottom-box{
@@ -625,29 +635,6 @@
         margin-left: 0px;
     }
 
-    .climeworks-block-info {
-        padding: 30px 20px;
-    }
-
-    .climeworks-right-block h2 {
-        font-size: 18px;
-        margin-bottom: 10px !important;
-    }
-
-    .climeworks-right-block h3 {
-        font-size: 16px;
-        padding-bottom: 10px;
-    }
-
-    .climeworks-right-block .text{
-        font-size: 14px;
-    }
-
-    .climeworks-sec {
-        padding-bottom: 50px;
-        padding-top: 50px;
-    }
-
     .time-warping-right-sec {
         padding-left: 50px;
     }
@@ -719,6 +706,10 @@
     .time-warping-speed-list li h3 {
         font-size: 20px;
     }
+
+    .the-starlight-dao-sec .container:before {
+        top: -40px;
+    }
 }   
 
 
@@ -748,10 +739,6 @@
         max-width: 100%;
     }
 
-    .hard-camp-claim-box {
-        margin-bottom: -180px;
-    }
-
     .weare-here-list-full-list > ul:last-child > li:last-child:after {
         top: 1.3px !important;
     }
@@ -770,19 +757,6 @@
 
     .collections-exculsive-sec {
         padding-top: 180px !important;
-    }
-
-    .elders-realm-left-block h2 {
-        font-size: 26px;
-    }
-
-    .climeworks-left-block {
-        width: 36%;
-        padding-right: 20px;
-    }
-
-    .climeworks-right-block {
-        width: 64%;
     }
 
     .starlight-roadmap-btn-block p {
@@ -840,12 +814,34 @@
     }
 
     .hard-camp-claim-show-box h2 {
-        font-size: 46px;
+        font-size: 32px;
         line-height: 30px;
     }
 
+    .hard-camp-claim-show-box h2 sub{
+        font-size: 18px;
+    }
+
+    .hard-claim-btn-block {
+        padding-top: 20px;
+    }
+
+    .how-to-works-list li h6 {
+        font-size: 16px;
+    }
+
+    .tier-full-list li .tier-box h3 {
+        font-size: 18px;
+        padding: 20px;
+    }
+    
+
+    .tier-bottom-box {
+        min-height: 250px;
+    }
+
     .hard-camp-claim-box {
-        max-width: 400px;
+        padding: 30px 20px;
     }
 
     .time-warping-left-block {
@@ -856,6 +852,10 @@
 
     span.Collectionimgbg-img {
         transform: scale(1);
+    }
+
+    .the-starlight-first-left-block {
+        padding-right: 20px;
     }
 }
 
@@ -868,6 +868,16 @@
 
     .primed-left-block {
         width: 100%;
+    }
+
+    .primed-right-block{
+        width: 100%;
+        padding-left: 0;
+    }
+
+    section.the-starlight-dao-sec{
+        padding-left: 15px !important;
+        padding-right: 15px !important;
     }
 
     .time-warping-sec{
@@ -890,32 +900,9 @@
         max-width: 170px;
     }
 
-    .primed-right-block {
+    .rimed-right-block {
         width: 100%;
         padding-left: 0;
-    }
-
-    .time-warping-sec {
-        padding-left: 15px !important;
-        padding-right: 15px !important;
-    }
-
-    .an-engaging-left-block {
-        padding-right: 0;
-        width: 100%;
-        padding-top: 20px;
-    }
-
-    .an-engaging-sec {
-        padding-top: 40px !important;
-        padding-bottom: 40px !important;
-        padding-right: 15px !important;
-        padding-left: 15px !important;
-    }
-
-    .an-engaging-right-block {
-        width: 100%;
-        order: -1;
     }
 
     .common-gapping.the-starlight-sec {
@@ -951,89 +938,13 @@
         font-size: 7px;
     }
 
-    .hard-camp-claim-box {
-        margin-bottom: -140px;
-    }
-
-    .collections-exculsive-sec{
-        padding-left: 15px !important;
-        padding-right: 15px !important;
-    }
-
     .sec-title {
         font-size: 24px !important;
     }
 
-    .collections-exculsive-left-block {
-        width: 100%;
-    }
-
-    .collections-exculsive-right-block {
-        width: calc(1000% + 0px);
-    }
-
-    .next-collection-block {
-        padding-top: 30px;
-        padding-bottom: 40px;
-    }
-
-    section.common-gapping.elders-realm-sec {
-        padding: 40px 15px 80px 15px !important;
-    }
-
-    .elders-realm-left-block {
-        width: 100%;
-    }
-
-    .elders-realm-right-block {
-        width: 100%;
-    }
-
-    .climeworks-mobile-img{
-        display: block;
-    }
-
-    .climeworks-decktop-img{
-        display: none;
-    }
-
-    .climeworks-inner-block {
-        padding-top: 246.3%;
-        border-radius: 20px;
-    }
-
-    .climeworks-left-block {
-        width: 246px;
-        margin-left: auto;
-        margin-right: auto;
-        padding-right: 0;
-        padding-top: 50px;
-    }
-
-    .climeworks-right-block {
-        width: 100%;
-    }
-
-    .climeworks-block-info {
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .climeworks-right-block .text {
-        font-size: 18px;
-    }
-
-    .climeworks-right-block h2 {
-        font-size: 24px !important;
-        margin-bottom: 20px !important;
-    }
-
-    .climeworks-right-block h3 {
-        padding-bottom: 30px;
-    }
-
     .starlight-roadmap-btn-block p {
         font-size: 12px;
+        width: 100%;
     }
 
     .starlight-roadmap-btn-block a.btn.btn-fill {
@@ -1159,6 +1070,44 @@
     }
     .new-header-right-btn {
         display: none;
+    }
+
+    .the-starlight-first-left-block{
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .the-starlight-first-right-block{
+        width: 100%;
+    }
+
+    .the-starlight-howit-left-block {
+        width: 100%;
+        padding-right: 0;
+        padding-bottom: 20px;
+    }
+
+    .the-starlight-howit-right-block {
+        width: 100%;
+        padding-left: 30px;
+    }
+
+    .how-to-works-list li h6 {
+        font-size: 16px !important;
+    }
+
+    .tier-full-list li {
+        width: 100%;
+        padding: 0 6px;
+        padding-bottom: 30px;
+    }
+
+    .starlight-roadmap-btn-block .btn {
+        min-width: 90px;
+    }
+
+    .tier-full-list{
+
     }
 }
 

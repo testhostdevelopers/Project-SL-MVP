@@ -13,7 +13,6 @@ import Token from './Pages/Token';
 import Cryptoloria from './Pages/Cryptoloria';
 import Explore from './Pages/Explore';
 import Collection from './Pages/Collection';
-
 import FullScreenImage from './Components/Popup/FullScreenImage';
 import CreateCollectibleMultiplePopup from './Components/Popup/CreateCollectibleMultiplePopup';
 import FinishedCollectiblePopup from './Components/Popup/FinishedCollectiblePopup';
@@ -25,7 +24,7 @@ import TokenPage from './Pages/TokenPage';
 
 import 'swiper/swiper-bundle.css';
 import {
-    BrowserRouter as Router,
+    BrowserRouter as Router, 
     Switch,
     Route
 } from "react-router-dom";

@@ -8,6 +8,7 @@ import RainbowIcon from "../assets/img/icons/custom/rainbow.svg";
 import topSellerUser4 from "../assets/img/custom/topSellerUser4.png";
 import FinishedCollectiblePopup from '../Components/Popup/PlaceABidPopup';
 import PlaceABidFollowPopup from '../Components/Popup/PlaceABidFollowPopup';
+import CheckOut from '../Components/Popup/CheckOut';
 import { Menu, Dropdown, Select } from 'antd';
 import { motion } from "framer-motion"
 
@@ -47,7 +48,6 @@ const Buy = () => {
 
     return (
         <>
-
             {
                 singleCollectionPopup && <FinishedCollectiblePopup setSinglePopup={setSinglePopup} setSingleCollectionPopup={setSingleCollectionPopup} />
             }
