@@ -7,6 +7,7 @@ import PrimedandReady from './PrimedandReady';
 import WeAreHereSec from './WeAreHereSec';
 import TheStarlightDAOSec from './TheStarlightDAOSec';
 import ClimeworksSec from './ClimeworksSec';
+import CreateCollectibleMultiplePopup from '../../Components/Popup/CreateCollectibleMultiplePopup';
 
 
 const index = () => {
@@ -17,6 +18,7 @@ const index = () => {
           <TheStarlightDAOSec />
           <ClimeworksSec />
           <WeAreHereSec />
+          <CreateCollectibleMultiplePopup />
         </>
     )
 }

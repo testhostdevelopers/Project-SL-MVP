@@ -1982,3 +1982,64 @@ ul.react-tabs__tab-list > li{
 .checkout-tab .react-tabs__tab-list li.react-tabs__tab--selected img.change-img-mode{
     filter: brightness(0) invert(1);
 }
+
+
+/* Input Field Css */
+
+.input-field > input{
+    background: #FBFBFB;
+    border: 1px solid #9D9D9D;
+    box-sizing: border-box;
+    border-radius: 47px;
+    height: 48px;
+    padding-left: 20px;
+}
+
+.input-field > label{
+    font-size: 18px;
+    color: #0E0E0E;
+}
+
+/* Nft Share Icon */
+
+.nft-share-icons ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nft-share-icons ul{
+    display: flex;
+}
+
+.nft-share-icons ul li{
+    flex: 1;
+}
+
+.nft-share-icons ul li a{
+    text-align: center;
+    font-size: 14px;
+    color: #9D9D9D;
+    display: block;
+}
+
+.nft-share-icons ul li a span{
+    display: block;
+    color: #000;
+    font-size: 30px;
+}
+
+.upload-file-field{
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+}
+
+.upload-file-field > input{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+}
