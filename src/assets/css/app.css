@@ -1078,7 +1078,7 @@ footer .ant-select:not(.ant-select-customize-input) .ant-select-selector{
     width: 488px;
     max-height: calc(100vh - 40px) !important;
     overflow-y: auto;
-    padding: 40px;
+    padding: 45px;
 }
 
 .popup-close-btn-exit{
@@ -1367,10 +1367,20 @@ input:focus-visible {
 .balance-info > div b {
 	font-weight: 600;
 }
+.place-a-bid-popup-container .bid-input .info .help svg {
+	cursor: pointer;
+}
 .place-a-bid-popup-container .bid-input .info {
 	position: absolute;
 	right: 0;
 	top: 12px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+.place-a-bid-popup-container .bid-input .info .nav-link {
+	padding: 0;
 }
 .place-a-bid-popup-container .bid-input .info b {
 	margin-left: 8px;

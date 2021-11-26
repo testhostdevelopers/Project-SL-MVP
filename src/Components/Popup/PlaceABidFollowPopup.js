@@ -8,7 +8,7 @@ const PlaceABidFollowPopup = (props) => {
         visible: { opacity: 1 },
     }
 
-    let { setSinglePopup } = props;
+    let { setSinglePopup, setErrorPopup } = props;
 
     return (
         <motion.div
@@ -72,7 +72,7 @@ const PlaceABidFollowPopup = (props) => {
                         </div>
                     </div>
 
-                    <button className="btn-gray w-100 mb-3">
+                    <button className="btn-gray w-100 mb-3" onClick={() => setErrorPopup(true) }>
                         Start
                     </button>
                 </div>

@@ -8,6 +8,10 @@ import RainbowIcon from "../assets/img/icons/custom/rainbow.svg";
 import topSellerUser4 from "../assets/img/custom/topSellerUser4.png";
 import FinishedCollectiblePopup from '../Components/Popup/PlaceABidPopup';
 import PlaceABidFollowPopup from '../Components/Popup/PlaceABidFollowPopup';
+import ErrorPopup from '../Components/Popup/ErrorPopup';
+import ShareThisNFTPopup from '../Components/Popup/ShareThisNFTPopup';
+import WhatIswETHPopup from '../Components/Popup/WhatIswETHPopup';
+
 import CheckOut from '../Components/Popup/CheckOut';
 import { Menu, Dropdown, Select } from 'antd';
 import { motion } from "framer-motion"
@@ -15,6 +19,10 @@ import { motion } from "framer-motion"
 const Buy = () => {
     const [singleCollectionPopup, setSingleCollectionPopup] = useState(false);
     const [singlePopup, setSinglePopup] = useState(false);
+    const [errorPopups, setErrorPopup] = useState(false);
+    const [sharePopup, setsharePopup] = useState(false);
+    const [helpPopup, sethelpPopup] = useState(false);
+    
 
     const menu = (
         <Menu>
@@ -31,7 +39,7 @@ const Buy = () => {
             <Menu.Item>
                 Refresh Metadata
             </Menu.Item>
-            <Menu.Item>
+            <Menu.Item onClick={() => setsharePopup(true)}>
                 Share
             </Menu.Item>
             <Menu.Item>
@@ -49,11 +57,19 @@ const Buy = () => {
     return (
         <>
             {
-                singleCollectionPopup && <FinishedCollectiblePopup setSinglePopup={setSinglePopup} setSingleCollectionPopup={setSingleCollectionPopup} />
+                singleCollectionPopup && <FinishedCollectiblePopup setSinglePopup={setSinglePopup}  sethelpPopup={sethelpPopup} setSingleCollectionPopup={setSingleCollectionPopup} />
             }
-
             {
-                singlePopup && <PlaceABidFollowPopup setSinglePopup={setSinglePopup} />
+                singlePopup && <PlaceABidFollowPopup setSinglePopup={setSinglePopup} setErrorPopup={setErrorPopup} />
+            }
+            {
+                errorPopups && <ErrorPopup setErrorPopup={setErrorPopup} />
+            }
+            {
+                sharePopup && <ShareThisNFTPopup setsharePopup={setsharePopup} />
+            }
+            {
+                helpPopup && <WhatIswETHPopup  sethelpPopup={sethelpPopup} />
             }
 
             <motion.section

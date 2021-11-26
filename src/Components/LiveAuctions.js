@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Menu, Dropdown, Select } from 'antd';
+import ReportPopup from '../Components/Popup/ReportPopup';
 
 
 export default function LiveAuctions ({title,WETH,bid,heartcount, Coverimg,User1,User2,User3}) {
+    const [ReportPopups, setReportPopup] = useState(false);
+    const [singlePopup, setSinglePopup] = useState(false);
     const menu = (
         <Menu>
             <Menu.Item>
@@ -15,12 +18,16 @@ export default function LiveAuctions ({title,WETH,bid,heartcount, Coverimg,User1
             <Menu.Item>
                 Burn Token
             </Menu.Item>
-            <Menu.Item>
+            <Menu.Item onClick={() => setReportPopup(true)}>
                 Report
             </Menu.Item>
         </Menu>
     );
   return (
+    <>
+    {
+        ReportPopups && <ReportPopup setSinglePopup={setSinglePopup} setReportPopup={setReportPopup} />
+    }
     <div className="col-sm-12 col-lg-3">
         <div className="liveAuction-card-container">
             <div className="live-image">
@@ -50,6 +57,7 @@ export default function LiveAuctions ({title,WETH,bid,heartcount, Coverimg,User1
             </div>
         </div>
     </div>
+    </>
   );
 }
 

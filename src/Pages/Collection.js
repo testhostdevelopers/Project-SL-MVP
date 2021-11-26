@@ -1,9 +1,15 @@
-import React from 'react'
-import topSeller3 from "../assets/img/custom/topSeller3.png";
-import topSeller4 from "../assets/img/custom/topSeller4.png";
-import topSellerUser1 from "../assets/img/custom/topSellerUser1.png";
-import topSellerUser3 from "../assets/img/custom/topSellerUser3.png";
-import topSellerUser4 from "../assets/img/custom/topSellerUser4.png";
+import React, { useState, useEffect } from "react";
+import LiveAuctions from '../Components/LiveAuctions';
+import TopCard from '../Components/TopCard';
+import ActivityNumberCard from '../Components/ActivityNumberCard';
+import HotBids from '../Components/HotBids';
+import { motion } from "framer-motion"
+import { Menu, Dropdown, Tabs, Select} from 'antd';
+import ReportPopup from '../Components/Popup/ReportPopup';
+import UpdateCoverPopup from "../Components/Popup/UpdateCoverPopup";
+import UpdateProfilePicPopup from "../Components/Popup/UpdateProfilePicPopup";
+
+import addicon from "../assets/img/custom/add-icon.png";
 import artWorkWeek1 from "../assets/img/custom/artWorkWeek1.png";
 import ActivityCard from "../assets/img/custom/activity-cardonly.png";
 import artWorkWeek2 from "../assets/img/custom/artWorkWeek2.png";
@@ -17,18 +23,15 @@ import flashlight from "../assets/img/custom/flashlight-line.png";
 import Priceicon from "../assets/img/custom/u_dollar-alt.png";
 import CollectionBannerBg from "../assets/img/custom/Collection-banner-bg.png";
 import userProfilePictures from "../assets/img/custom/userProfilePictures.png";
-import LiveAuctions from '../Components/LiveAuctions';
-import TopCard from '../Components/TopCard';
-import ActivityNumberCard from '../Components/ActivityNumberCard';
-import HotBids from '../Components/HotBids';
-import { motion } from "framer-motion"
-import { Menu, Dropdown, Tabs, Select} from 'antd';
-
 
 const { TabPane } = Tabs;
 const { Option } = Select;
 
 const Collection = () => {
+    const [ReportPopups, setReportPopup] = useState(false);
+    //const [singlePopup, setSinglePopup] = useState(false);
+    const [CoverPopup, setUpdateCoverPopup] = useState(false);
+    const [profilePopup, setprofilePopup] = useState(false);
 
     const variants = {
         hidden: { opacity: 0 },
@@ -46,14 +49,34 @@ const Collection = () => {
             <Menu.Item>
                 Burn Token
             </Menu.Item>
-            <Menu.Item>
+            <Menu.Item onClick={() => setReportPopup(true)}>
                 Report
             </Menu.Item>
         </Menu>
     );
 
+    const singleoption = (
+        <Menu>
+            <Menu.Item onClick={() => setReportPopup(true)}>
+                Report
+            </Menu.Item>    
+        </Menu>
+    );
+
 
     return (
+        <>
+        {
+            ReportPopups && <ReportPopup setReportPopup={setReportPopup} />
+        }
+        {
+            CoverPopup && <UpdateCoverPopup setUpdateCoverPopup={setUpdateCoverPopup} />
+        }
+        {
+            profilePopup && <UpdateProfilePicPopup setprofilePopup={setprofilePopup} />
+        }
+
+    
         <motion.section
             initial="hidden"
             animate="visible"
@@ -65,10 +88,13 @@ const Collection = () => {
                             <div className="position-relative">
                                 <div className="border p-3 gray-color profile-pictures-cover">
                                     <img src={CollectionBannerBg} width="100%" alt="" />
-                                    {/* <button className="bg-white border-gray edit-profile">Add Cover</button> */}
+                                    <button onClick={() => setUpdateCoverPopup(true)}  className="bg-white border-gray edit-profile">Add Cover</button>
                                 </div>
                                 <div className="profile-info-position">
                                     <div className="profile-user-pictures">
+                                        <span onClick={() => setprofilePopup(true)}  className="edit-proile-img">
+                                            <img src={addicon}/>
+                                        </span>
                                         <img src={userProfilePictures} width="100%" alt="" />
                                     </div>
                                     <div className="mt-3 profile-usr-name-h3-size">
@@ -83,12 +109,13 @@ const Collection = () => {
                                                 <path clipRule="evenodd" clipRule="evenodd" d="M3.75 6.75H7.5V11.25H10.5V6.75H14.25L9 1.5L3.75 6.75ZM15 9V14.25H3V9H1.5V15C1.5 15.4142 1.83579 15.75 2.25 15.75H15.75C16.1642 15.75 16.5 15.4142 16.5 15V9H15Z" fill="black" />
                                             </svg>
                                         </button>
+                                        <Dropdown overlay={singleoption}>
                                         <button className="bg-white border-gray select">
                                             <svg width="14" height="4" viewBox="0 0 14 4" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path clipRule="evenodd" clipRule="evenodd" d="M1.75 0.5C0.925 0.5 0.25 1.175 0.25 2C0.25 2.825 0.925 3.5 1.75 3.5C2.575 3.5 3.25 2.825 3.25 2C3.25 1.175 2.575 0.5 1.75 0.5ZM12.25 0.5C11.425 0.5 10.75 1.175 10.75 2C10.75 2.825 11.425 3.5 12.25 3.5C13.075 3.5 13.75 2.825 13.75 2C13.75 1.175 13.075 0.5 12.25 0.5ZM5.5 2C5.5 1.175 6.175 0.5 7 0.5C7.825 0.5 8.5 1.175 8.5 2C8.5 2.825 7.825 3.5 7 3.5C6.175 3.5 5.5 2.825 5.5 2Z" fill="black" />
                                             </svg>
-
                                         </button>
+                                        </Dropdown>
                                     </div>
                                 </div>
                             </div>
@@ -299,6 +326,7 @@ const Collection = () => {
                 </div>
             </div>
         </motion.section>
+        </>
     )
 }
 

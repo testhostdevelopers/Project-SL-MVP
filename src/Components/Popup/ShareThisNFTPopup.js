@@ -8,7 +8,7 @@ const ShareThisNFTPopup = (props) => {
         visible: { opacity: 1 },
     }
 
-    let { setSingleCollectionPopup } = props;
+    let { setsharePopup } = props;
 
     return (
         <motion.div
@@ -18,7 +18,7 @@ const ShareThisNFTPopup = (props) => {
             <div className="border-radius bg-white popup-width">
                 <div className="justify-content-between d-flex cursor-pointer mb-3">
                     <h3 className="">Share this NFT</h3>
-                    <div className="popup-close-btn-outline cursor-pointer" onClick={() => { setSingleCollectionPopup(false); document.body.style.overflow = "scroll"; }}>
+                    <div className="popup-close-btn-outline cursor-pointer" onClick={() => { setsharePopup(false); document.body.style.overflow = "scroll"; }}>
                         <i class="fas fa-times"></i>
                     </div>
                 </div>
