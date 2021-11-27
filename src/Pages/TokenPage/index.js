@@ -18,7 +18,7 @@ const index = () => {
           <TheStarlightDAOSec />
           <ClimeworksSec />
           <WeAreHereSec />
-          <CreateCollectibleMultiplePopup />
+          {/* <CreateCollectibleMultiplePopup /> */}
         </>
     )
 }

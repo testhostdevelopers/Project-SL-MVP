@@ -87,7 +87,7 @@ img{
 .btn:focus{
     box-shadow: none !important;
 }
-
+h3.main-title,
 .buy-art-work-week h1, 
 .buy-art-work-week h2, 
 .buy-art-work-week h3, 
@@ -1001,7 +1001,7 @@ footer .ant-select:not(.ant-select-customize-input) .ant-select-selector{
 }
 
 .cryptoioria-banner-container {
-	width: 100vw;
+	width: 100%;
 	height: 150vh;
 	background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(74,65,126,0.8225665266106442) 35%, rgba(74,65,126,0.5732668067226891) 64%, rgba(252,252,252,0) 100%);
 	position: relative;
@@ -1567,6 +1567,7 @@ div.ant-tabs > .ant-tabs-nav{
 
 div.cryptoloria-page {
 	margin-top: 172px;
+	max-width: 100%;
 }
 .cryptoioria-banner-container .navbar-brand {
 	padding-top: 0;
