@@ -42,6 +42,8 @@ const Navbar = () => {
             document.documentElement.style.setProperty('--notification-ping-bg', "#402F5B");
             document.documentElement.style.setProperty('--footer-input-bg', "#C7C7C7");
             document.documentElement.style.setProperty('--bg-main-white', "#121212");
+            document.documentElement.style.setProperty('--bordercolor', "#2A2A2A");
+            document.documentElement.style.setProperty('--starbannergradient', "linear-gradient(180deg, rgba(0, 0, 0, 0) 57.59%, #121212 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))");
         } else {
             document.documentElement.style.setProperty('--bg-main', '#FCFCFC');
             document.documentElement.style.setProperty('--bg-card', '#fff');
@@ -58,6 +60,8 @@ const Navbar = () => {
             document.documentElement.style.setProperty('--notification-ping-bg', "#F7F2FF");
             document.documentElement.style.setProperty('--footer-input-bg', "#fff");
             document.documentElement.style.setProperty('--bg-main-white', "#fff");
+            document.documentElement.style.setProperty('--bordercolor', "#C7C7C7");
+            document.documentElement.style.setProperty('--starbannergradient', "linear-gradient(180deg, rgba(0, 0, 0, 0) 30.4%, rgba(255, 255, 255, 0.62) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3))");
         }
     }, [theme])
 

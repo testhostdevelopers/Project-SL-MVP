@@ -107,7 +107,7 @@
 }
 
 .upcoming-collections-info-box{
-    background: #FFFFFF;
+    background: var(--bg-card);
     border: 1px solid #C7C7C7;
     box-sizing: border-box;
     box-shadow: 0px 25px 60px rgba(0, 0, 0, 0.05);
@@ -133,13 +133,13 @@
 
 .upcoming-collections-info-box > p{
     font-size: 12px;
-    color: #000000;
+    color: var(--black-text);
 }
 
 .upcoming-collections-time > span{
     font-size: 12px;
     text-align: center;    
-    color: #000000;
+    color: var(--black-text);
     font-weight: bold;
     display: block;
 }
@@ -154,10 +154,10 @@
 
 .upcoming-soon-collections-count-list li {
     font-size: 18px;
-    color: #000000;
+    color: var(--black-text);
     font-weight: bold;
     line-height: normal;
-    border-right: 2px solid #000000;
+    border-right: 2px solid var(--bordercolor);
     padding-right: 24px;
     margin-right: 24px;
     text-align: left;
@@ -165,7 +165,7 @@
 
 .upcoming-soon-collections-count-list li span {
     font-size: 10px;
-    color: #000000;
+    color: var(--black-text);
     font-weight: normal;
     display: block;
 }

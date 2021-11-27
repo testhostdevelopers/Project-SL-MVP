@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import starlBanner from '../../assets/img/custom/starlBanner.png'
+// import starlBannerDark from '../../assets/img/custom/starlBannerDark.png'
 import { useLocation, Link } from "react-router-dom";
 
 const StarlBanner = () => {
@@ -7,7 +8,8 @@ return (
     <section className="starl-banner-sec">
         <div className="starl-banner-inner">
             <div className="starl-banner-img">
-                <img src={starlBanner} />
+                <img src={starlBanner} className="show-in-light"/>
+                {/* <img src={starlBannerDark} className="show-in-dark"/> */}
             </div>
             <div className="starl-banner-info">
                 <h1>Starlight <sub>(SLX)</sub></h1>
